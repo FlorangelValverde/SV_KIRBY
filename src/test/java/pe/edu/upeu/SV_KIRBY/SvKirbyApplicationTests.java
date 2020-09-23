@@ -1,13 +1,23 @@
 package pe.edu.upeu.SV_KIRBY;
-
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import pe.edu.upeu.SV_KIRBY.service.RolService;
 
 @SpringBootTest
 class SvKirbyApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
+	@Autowired
+    private RolService rolDao;
+    @Test
+    void contextLoads() {
+    	/*
+        Rol r = new Rol();
+        r.setNombre("Administrador");
+        System.out.println(rolDao.create(r));
+        */
+        System.out.println(rolDao.readAll());
+    }
 
 }
+	
