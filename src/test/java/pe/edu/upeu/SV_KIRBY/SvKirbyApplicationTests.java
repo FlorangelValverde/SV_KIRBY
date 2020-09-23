@@ -11,15 +11,16 @@ import pe.edu.upeu.SV_KIRBY.service.RolService;
 @SpringBootTest
 class SvKirbyApplicationTests {
 @Autowired
-	private RolService rolDao;
+	private RolDao rolDao;
 	@Test
 	void contextLoads() {
-		/*
+		
 		Rol r = new Rol();
-		r.setNombre("Administrador");
-		System.out.println(rolDao.create(r));
-		*/
-		System.out.println(rolDao.readAll());
+		r.setIdrol(3);
+		r.setNomrol("Vendedor 3");
+		System.out.println(rolDao.delete(3));
+		
+		//System.out.println(rolDao.read(1).getNomrol());
 	}
 
 }

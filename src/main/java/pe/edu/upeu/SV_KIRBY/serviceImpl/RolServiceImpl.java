@@ -18,25 +18,25 @@ private RolDao rolDao;
 	@Override
 	public int  create(Rol r) {
 		// TODO Auto-generated method stub
-		return 0;
+		return rolDao.create(r);
 	}
 
 	@Override 
 	public int update(Rol r) {
 		// TODO Auto-generated method stub
-		return 0;
+		return rolDao.update(r);
 	}
 
 	@Override 
 	public int delete(int id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return rolDao.delete(id);
 	}
 
 	@Override 
 	public Rol read(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return rolDao.read(id);
 	}
 
 	@Override 
