@@ -9,33 +9,33 @@ package pe.edu.upeu.SV_KIRBY.serviceImpl;
 	import pe.edu.upeu.SV_KIRBY.service.RolService;
 	import pe.edu.upeu.SV_KIRBY.dao.RolDao;
 	import pe.edu.upeu.SV_KIRBY.entity.Rol;
-	@Service
-	public class RolServiceImpl implements RolService{
-	@Autowired
-	private RolDao rolDao;
+@Service
+public class RolServiceImpl implements RolService{
+@Autowired
+private RolDao rolDao;
 
-	    @Override
+ @Override
 	    public int  create(Rol r) {
 	        // TODO Auto-generated method stub
-	        return 0;
+	        return rolDao.create(r);
 	    }
 
 	    @Override 
 	    public int update(Rol r) {
 	        // TODO Auto-generated method stub
-	        return 0;
+	        return rolDao.update(r);
 	    }
 
 	    @Override 
 	    public int delete(int id) {
 	        // TODO Auto-generated method stub
-	        return 0;
+	        return rolDao.delete(id);
 	    }
 
 	    @Override 
 	    public Rol read(int id) {
 	        // TODO Auto-generated method stub
-	        return null;
+	        return rolDao.read(id);
 	    }
 
 	    @Override 
