@@ -24,7 +24,7 @@ public class RolDaoImpl implements RolDao{
 	    @Override
 	    public int update(Rol r) {
 	        // TODO Auto-generated method stub
-	        String SQL = "insert into rol (nomrol)=? where idrol=?";
+	        String SQL = "update rol set nomrol =? where idrol=?";
 	        return jdbcTemplate.update(SQL, r.getNomrol(), r.getIdrol());
 	    }
 	    @Override
