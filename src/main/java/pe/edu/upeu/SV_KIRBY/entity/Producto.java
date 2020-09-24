@@ -1,4 +1,4 @@
-package pe.edu.upeu.SV_KIRBY.dao;
+package pe.edu.upeu.SV_KIRBY.entity;
 
 public class Producto {
 	private int idproducto;
@@ -6,6 +6,7 @@ public class Producto {
 	private double precio;
 	private int cantidad;
 	public Producto() {
+	
 	}
 	public Producto(int idproducto, String nomprod, double precio, int cantidad) {
 		super();
@@ -38,7 +39,6 @@ public class Producto {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
-	
 	
 
 }
