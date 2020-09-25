@@ -3,8 +3,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import pe.edu.upeu.SV_KIRBY.dao.RolDao;
-import pe.edu.upeu.SV_KIRBY.entity.Rol;
+import pe.edu.upeu.SV_KIRBY.dao.PersonaDao;
+import pe.edu.upeu.SV_KIRBY.entity.Persona;
 
 
 
@@ -12,15 +12,17 @@ import pe.edu.upeu.SV_KIRBY.entity.Rol;
 @SpringBootTest
 class SvKirbyApplicationTests {
 	@Autowired
-    private RolDao rolDao;
+	private PersonaDao personaDao;
     @Test
     void contextLoads() {
 
-        Rol r = new Rol();
-        r.setIdrol(9);
-        r.setNomrol("Vendedor Nuevo");
-        System.out.println(rolDao.delete(10));
+        Persona e = new Persona();
+        e.setIdpersona(1);
+        e.setNombres("Alessandro");
+        e.setApellidos("Caceres");
+        e.setDni("76588987");
+        System.out.println(personaDao.update(e));
+	}
 
-    	//System.out.println(rolDao.read(1).getNomrol());	
-    }
-    }
+}
+	
