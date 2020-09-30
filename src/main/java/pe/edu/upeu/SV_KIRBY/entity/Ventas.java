@@ -3,14 +3,14 @@ package pe.edu.upeu.SV_KIRBY.entity;
 public class Ventas {
 	private int idventas;
 	private String fecha;
-	private char tipodoc;
+	private String tipodoc;
 	private String numdoc;
 	private int idpersona;
 	private int idcliente;
 	public Ventas() {
 		super();
 	}
-	public Ventas(int idventas, String fecha, char tipodoc, String numdoc, int idpersona, int idcliente) {
+	public Ventas(int idventas, String fecha, String tipodoc, String numdoc, int idpersona, int idcliente) {
 		super();
 		this.idventas = idventas;
 		this.fecha = fecha;
@@ -31,10 +31,10 @@ public class Ventas {
 	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
-	public char getTipodoc() {
+	public String getTipodoc() {
 		return tipodoc;
 	}
-	public void setTipodoc(char tipodoc) {
+	public void setTipodoc(String tipodoc) {
 		this.tipodoc = tipodoc;
 	}
 	public String getNumdoc() {

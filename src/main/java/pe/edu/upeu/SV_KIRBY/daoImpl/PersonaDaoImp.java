@@ -17,7 +17,7 @@ private JdbcTemplate JdbcTemplate;
 	@Override
 	public int create(Persona e) {
 		// TODO Auto-generated method stub
-		String SQL = "insert into persona (nombres, apellidos, dni) values (?,?,?)";
+		String SQL = "insert into persona (nombres, apellidos, dni) values (?,?,?,?)";
 		return JdbcTemplate.update(SQL, e.getNombres(), e.getApellidos(), e.getDni());
 	}
 

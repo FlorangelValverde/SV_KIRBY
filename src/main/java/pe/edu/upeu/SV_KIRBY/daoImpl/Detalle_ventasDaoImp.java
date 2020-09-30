@@ -16,15 +16,15 @@ private JdbcTemplate JdbcTemplate;
 	@Override
 	public int create(Detalle_ventas d) {
 		// TODO Auto-generated method stub
-		String SQL = "insert into detalle_ventas (precio, cantidad, subtotal, idventas, idproducto) values (?)";
+		String SQL = "insert into detalle_ventas (precio, cantidad, subtotal, idventas, idproducto) values (?,?,?,?,?)";
 		return JdbcTemplate.update(SQL,d.getPrecio(), d.getCantidad(), d.getSubtotal(), d.getIdventas(), d.getIdproducto());
 	}
 
 	@Override
 	public int update(Detalle_ventas d) {
 		// TODO Auto-generated method stub
-		String SQL = "update detalle_ventas precio, cantidad, , idventas, idproducto =? where iddetalle_ventas";
-		return JdbcTemplate.update(SQL, d.getPrecio(), d.getCantidad(), d.getIdventas(), d.getIdproducto(), d.getIddetalle_ventas());
+		String SQL = "update detalle_ventas set precio =?, cantidad =?, subtotal=? where iddetalle_ventas=?";
+		return JdbcTemplate.update(SQL, d.getPrecio(), d.getCantidad(),d.getSubtotal(), d.getIddetalle_ventas());
 	}
 
 	@Override
