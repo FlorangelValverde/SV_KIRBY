@@ -17,15 +17,15 @@ private JdbcTemplate JdbcTemplate;
 @Override
 public int create(Ventas v) {
 	// TODO Auto-generated method stub
-	String SQL = "insert into ventas (fecha, tipodoc, numdoc, idpersona, idcliente) values(?)";
+	String SQL = "insert into ventas (fecha, tipodoc, numdoc, idpersona, idcliente) values(?,?,?,?,?)";
 	return JdbcTemplate.update(SQL,v.getFecha(), v.getTipodoc(), v.getNumdoc(), v.getIdpersona(), v.getIdcliente());
 }
 
 @Override
 public int update(Ventas v) {
 	// TODO Auto-generated method stub
-	String SQL = "update ventas set fecha =?, tipodoc=?, numdoc=?, idpersona=?, idcliente =? where idventas=?";
-	return JdbcTemplate.update(SQL, v.getFecha(), v.getTipodoc(), v.getNumdoc(), v.getIdpersona(), v.getIdcliente(), v.getIdventas());
+	String SQL = "update ventas set fecha =?, tipodoc=?, numdoc=?  where idventas=?";
+	return JdbcTemplate.update(SQL, v.getFecha(), v.getTipodoc(), v.getNumdoc(), v.getIdventas());
 }
 
 @Override

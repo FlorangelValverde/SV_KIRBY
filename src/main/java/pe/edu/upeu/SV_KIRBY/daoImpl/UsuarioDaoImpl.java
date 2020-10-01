@@ -9,18 +9,16 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import pe.edu.upeu.SV_KIRBY.dao.UsuarioDao;
-
 import pe.edu.upeu.SV_KIRBY.entity.Usuario;
 @Repository
 public class UsuarioDaoImpl  implements UsuarioDao{
-
 @Autowired
 private JdbcTemplate JdbcTemplate;
 	@Override
 	public int create(Usuario u) {
 		// TODO Auto-generated method stub
-		String SQL = "insert into usuario (nomuser, clave, estado,idrol) values(?,?,?,?)";
-		return 	JdbcTemplate.update(SQL,u.getNomuser(), u.getClave(), u.getEstado(), u.getIdrol());
+		String SQL = "insert into usuario (idpersona, nomuser, clave, estado,idrol) values(?,?,?,?,?)";
+		return 	JdbcTemplate.update(SQL, u.getIdpersona(), u.getNomuser(), u.getClave(), u.getEstado(), u.getIdrol());
 	}
 
 	@Override

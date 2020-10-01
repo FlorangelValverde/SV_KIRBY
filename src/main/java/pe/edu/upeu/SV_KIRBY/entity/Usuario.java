@@ -4,12 +4,12 @@ public class Usuario {
 	private int idpersona;
 	private String nomuser;
 	private String clave;
-	private char estado;
+	private String estado;
 	private int idrol;
 	public Usuario() {
 		
 	}
-	public Usuario(int idpersona, String nomuser, String clave, char estado, int idrol) {
+	public Usuario(int idpersona, String nomuser, String clave, String estado, int idrol) {
 		super();
 		this.idpersona = idpersona;
 		this.nomuser = nomuser;
@@ -35,10 +35,10 @@ public class Usuario {
 	public void setClave(String clave) {
 		this.clave = clave;
 	}
-	public char getEstado() {
+	public String getEstado() {
 		return estado;
 	}
-	public void setEstado(char estado) {
+	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 	public int getIdrol() {
@@ -47,5 +47,5 @@ public class Usuario {
 	public void setIdrol(int idrol) {
 		this.idrol = idrol;
 	}
-
+	
 }
