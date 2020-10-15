@@ -48,5 +48,12 @@ private JdbcTemplate JdbcTemplate;
 		String SQL = "select * from usuario";
 		return JdbcTemplate.queryForList(SQL);
 	}
+	
+	@Override
+	public Usuario read (String nomuser) {
+		String SQL = "select * from usuario where nomuser=?";
+				return JdbcTemplate.queryForObject(SQL, new Object[] {nomuser}, new BeanPropertyRowMapper<Usuario>(Usuario.class));
+	
+	}
 
 }
